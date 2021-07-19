@@ -6,7 +6,7 @@ vim.g.mapleader = ' '
 vim.api.nvim_set_keymap('n','<Leader>h',':set hlsearch!<CR>',{noremap = true, silent = true})
 
 -- open/hide filelist
-vim.api.nvim_set_keymap('n','<Leader>e',':NvimTreeToggle<CR>',{noremap = true, silent = true})
+vim.api.nvim_set_keymap('n','<Leader>l',':NvimTreeToggle<CR>',{noremap = true, silent = true})
 
 -- better window movement
 vim.api.nvim_set_keymap('n','<C-h>','<C-w>h',{ silent = true})
