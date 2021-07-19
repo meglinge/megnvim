@@ -17,7 +17,9 @@ end
 
 
 
-  vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()' ]]
+
+
+vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()' ]]
 
 
 local nvim_lsp = require('lspconfig')
@@ -64,4 +66,24 @@ for _, lsp in ipairs(servers) do
       debounce_text_changes = 150,
     }
   }
+require'lspconfig'.sumneko_lua.setup{
+	settings = {
+	Lua = {
+      diagnostics = {
+        globals = {'vim'}
+      },
+      runtime = {
+        version = "LuaJIT",
+        path = vim.split(package.path, ";")
+      },
+      workspace = {
+        library = {
+          [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+          [vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true
+        }
+      }
+    }
+  }
+
+}
 end

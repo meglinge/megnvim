@@ -1,1 +1,1 @@
-vim.o.number = true
+vim.o.iskeyword="-,+,="
