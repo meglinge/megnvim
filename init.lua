@@ -1,5 +1,4 @@
 require('plugins')
 require('keymappings')
-require('nv-compe')
-require('lsp.init')
 require('settings')
+require('user.config')
