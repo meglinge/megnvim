@@ -1,3 +1,3 @@
-require('keymappings')
+require('keymaps')
 require('plugins')
 require('configs')
