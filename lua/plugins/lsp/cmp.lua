@@ -43,13 +43,13 @@ return {
 
                 -- 快捷键
                 mapping = cmp.mapping.preset.insert({
-                    -- ["<Tab>"] = vim.schedule_wrap(function(fallback)
-                    --     if cmp.visible() and has_words_before() then
-                    --         cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
-                    --     else
-                    --         fallback()
-                    --     end
-                    -- end),
+                    ["<Tab>"] = vim.schedule_wrap(function(fallback)
+                        if cmp.visible() and has_words_before() then
+                            cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
+                        else
+                            fallback()
+                        end
+                    end),
                     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
                     ['<C-f>'] = cmp.mapping.scroll_docs(4),
                     ['<C-h>'] = cmp.mapping.complete(),
