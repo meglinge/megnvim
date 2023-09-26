@@ -10,6 +10,8 @@ local nmappings = {
     { from = '<leader>e', to = ':Neotree toggle position=left<CR>' },
     { from = '<leader>f', to = ':Neotree toggle position=float<CR>' },
     { from = '<leader>f', to = '<esc>:Neotree toggle position=float<CR>', mode = "i" },
+    { from = '<leader>j', to = ':ClangdSwitchSourceHeader<CR>',           mode = "ivn" },
+
 }
 for _, mapping in ipairs(nmappings) do
     local modestr = mapping.mode or "n"

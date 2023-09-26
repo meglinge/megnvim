@@ -63,7 +63,23 @@ return {
                     }
                 end,
                 ["clangd"] = function()
-                    require 'lspconfig'.clangd.setup {}
+                    require 'lspconfig'.clangd.setup {
+                        default_config = {
+                            cmd = { "clangd", "--background-index --std=c++" },
+                            filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
+                            root_dir = {
+                                '.clangd',
+                                '.clang-tidy',
+                                '.clang-format',
+                                'compile_commands.json',
+                                'compile_flags.txt',
+                                'configure.ac',
+                                '.git'
+
+                            },
+                            single_file_support = true,
+                        }
+                    }
                 end,
                 ["neocmake"] = function()
                     require 'lspconfig'.neocmake.setup {

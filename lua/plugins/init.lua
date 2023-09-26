@@ -4,6 +4,7 @@ return {
     require("plugins.common.bufferline"),
     require("plugins.common.copilot"),
     require("plugins.common.cmake_tools"),
+    require("plugins.common.flash"),
     require("plugins.lsp.mason"),
     require("plugins.lsp.mason_lspconfig"),
     require("plugins.theme.tokyonight"),
